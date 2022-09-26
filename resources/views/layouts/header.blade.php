@@ -92,7 +92,7 @@
 							<ul class="navigation clearfix">
 								<li class="current dropdown"><a href="/">Home</a>
 								</li>
-								<li class="dropdown"><a href="/">Menu</a>
+								{{-- <li class="dropdown"><a href="/">Menu</a>
 									<ul>
 										<li>
 											<a href="/">Konfirmasi Data Peserta</a>
@@ -107,7 +107,7 @@
 											<a href="{{route('broadcast')}}">Broadcast</a>
 										</li>
 									</ul>
-								</li>
+								</li> --}}
 							</ul>
 						</div>
 					</nav>
