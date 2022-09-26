@@ -235,6 +235,7 @@
                         var val = this.value;
                         console.log(val);
                         document.getElementById('tabel_peserta').style.display = 'none';
+                        
                         $.ajax({
                             url:'/daftar/peserta/'+val,
                             type: 'get',

@@ -10,7 +10,7 @@ class Forwardconfirm extends Model
     use HasFactory;
     protected $table = 'forwardconfirms';
     protected $fillable = [
-        'cabang_id','pelatihan_id',
+        'cabang_id','pelatihan_id','untuk'
     ];
 
     public function cabang()
@@ -21,5 +21,10 @@ class Forwardconfirm extends Model
     public function pelatihan()
     {
         return $this->belongsTo(Pelatihan::class);
+    }
+
+    public function untuk()
+    {
+        return $this->belongsTo(Cabang::class);
     }
 }

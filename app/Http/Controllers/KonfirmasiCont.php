@@ -238,7 +238,7 @@ class KonfirmasiCont extends Controller
     {
         if(request()->ajax())
         {
-            $f = Forwardconfirm::orderBy('created_at', 'desc')->where('cabang_id',$cabang_id)->first();
+            $f = Forwardconfirm::orderBy('created_at', 'desc')->where('untuk',$cabang_id)->first();
             if ($f !== null) {
                 # code...
                 $p = Peserta::with('kabupaten')->with('pelatihan')->with('filepeserta')->with('program')->with('cabang')
