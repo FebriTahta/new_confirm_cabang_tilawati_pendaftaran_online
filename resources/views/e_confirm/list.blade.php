@@ -26,6 +26,19 @@
     </style>
 @endsection
 
+@section('menu')
+<li class="dropdown"><a href="/">Menu</a>
+    <ul>
+        <li>
+            <a href="/">Konfirmasi Data Peserta</a>
+        </li>
+        <li>
+            <a href="#" id="data-diklat">Daftar Semua Diklat</a>
+        </li>
+    </ul>
+</li>
+@endsection
+
 @section('content')
 <div class="block">
     <section class="recipe-section-two" style="background-image: url({{ asset('tilawatipusat/landing/images/background/7.jpg') }})">
@@ -235,7 +248,7 @@
                         var val = this.value;
                         console.log(val);
                         document.getElementById('tabel_peserta').style.display = 'none';
-                        
+                        document.getElementById('data-diklat').setAttribute('href', '/seluruh-diklat/'+val);
                         $.ajax({
                             url:'/daftar/peserta/'+val,
                             type: 'get',

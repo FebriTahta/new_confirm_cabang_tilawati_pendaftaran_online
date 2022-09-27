@@ -92,22 +92,8 @@
 							<ul class="navigation clearfix">
 								<li class="current dropdown"><a href="/">Home</a>
 								</li>
-								{{-- <li class="dropdown"><a href="/">Menu</a>
-									<ul>
-										<li>
-											<a href="/">Konfirmasi Data Peserta</a>
-										</li>
-										<li>
-											<a href="{{route('seluruh.diklat')}}">Daftar Semua Diklat</a>
-										</li>
-										<li>
-											<a href="{{route('seluruh.webinar')}}">Daftar Semua Webinar</a>
-										</li>
-										<li>
-											<a href="{{route('broadcast')}}">Broadcast</a>
-										</li>
-									</ul>
-								</li> --}}
+								@yield('menu')
+								
 							</ul>
 						</div>
 					</nav>

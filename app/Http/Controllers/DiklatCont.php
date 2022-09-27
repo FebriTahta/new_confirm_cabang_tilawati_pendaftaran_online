@@ -20,11 +20,13 @@ class DiklatCont extends Controller
         return view('diklat.index2');
     }
 
-    public function data_diklat(Request $request)
+    public function data_diklat(Request $request,$cabang_id)
     {
         if(request()->ajax())
         {
-            $data = Pelatihan::orderBy('tanggal','desc')->where('jenis','diklat')->where('cabang_id', 79)->get();
+            $f = Forwardconfirm::orderBy('created_at', 'desc')->where('untuk',$cabang_id)->first();
+
+            $data = Pelatihan::where('id',$f->pelatihan_id)->orderBy('tanggal','desc')->where('jenis','diklat')->where('cabang_id', 79)->get();
                     return DataTables::of($data)
                         ->addColumn('peserta', function($data){
                             $data2 = Peserta::where('pelatihan_id',$data->id)->where('status',1)->get()->count();
