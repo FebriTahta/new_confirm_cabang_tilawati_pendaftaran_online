@@ -30,7 +30,7 @@ Route::get('/daftar/peserta/{cabang_id}',[KonfirmasiCont::class,'daftar_peserta'
 
 //diklat
 Route::get('/seluruh-diklat/{cabang_id}',[DiklatCont::class, 'index'])->name('seluruh.diklat');
-Route::get('/data-diklat',[DiklatCont::class, 'data_diklat'])->name('data_diklat');
+Route::get('/data-diklat/{cabang_id}',[DiklatCont::class, 'data_diklat'])->name('data_diklat');
 
 //webinar
 Route::get('/seluruh-webinar',[DiklatCont::class, 'index2'])->name('seluruh.webinar');

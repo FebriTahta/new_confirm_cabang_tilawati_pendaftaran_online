@@ -10,9 +10,10 @@ use Illuminate\Http\Request;
 
 class DiklatCont extends Controller
 {
-    public function index()
+    public function index($cabang_id)
     {
-        return view('diklat.index');
+        $cabang_id = $cabang_id;
+        return view('diklat.index',compact('cabang_id'));
     }
 
     public function index2()

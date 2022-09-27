@@ -40,6 +40,7 @@
                 <div class="auto-container">
                     <!-- Sec Title Two -->
                     <div class="table-responsive">
+                        <input type="hidden" id="cabang_id" value="{{$cabang_id}}">
                         <span class="sec-title-two">
                             <a href="#" class="title">Data Diklat</a>
                         </span>
@@ -403,13 +404,14 @@
             });
 
             $(document).ready(function(){
+            var cabang_id = $('#cabang_id').val();
             $('#data').DataTable({
                 //karena memakai yajra dan template maka di destroy dulu biar ga dobel initialization
                 destroy: true,
                 processing: true,
                 serverSide: true,
                 ajax: {
-                    url: "/data-diklat",
+                    url: "/data-diklat/"+cabang_id,
                 },
                 columns: [
                     
